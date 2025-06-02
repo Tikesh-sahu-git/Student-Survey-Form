@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Survey Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">Student Experience Survey</h1>
+    <p id="description">We value your feedback. Please fill out this form to help us improve our school services.</p>
+
+    <form id="survey-form">
+      <!-- Name -->
+      <label id="name-label" for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+
+      <!-- Email -->
+      <label id="email-label" for="email">School Email:</label>
+      <input type="email" id="email" name="email" placeholder="e.g. student@school.edu" required />
+
+      <!-- Age -->
+      <label id="number-label" for="number">Age (10-25):</label>
+      <input type="number" id="number" name="age" min="10" max="25" placeholder="Enter your age" required />
+
+      <!-- Grade Level -->
+      <label for="dropdown">What is your current grade level?</label>
+      <select id="dropdown" name="grade" required>
+        <option value="">-- Select your grade --</option>
+        <option value="middle">Middle School</option>
+        <option value="high">High School</option>
+        <option value="college">College/University</option>
+      </select>
+
+      <!-- Radio: Favorite Subject -->
+      <p>What is your favorite subject?</p>
+      <label><input type="radio" name="subject" value="math" /> Math</label>
+      <label><input type="radio" name="subject" value="science" /> Science</label>
+      <label><input type="radio" name="subject" value="english" /> English</label>
+      <label><input type="radio" name="subject" value="history" /> History</label>
+
+      <!-- Checkbox: School Activities -->
+      <p>What school activities do you participate in?</p>
+      <label><input type="checkbox" name="activities" value="sports" /> Sports</label>
+      <label><input type="checkbox" name="activities" value="music" /> Music/Band</label>
+      <label><input type="checkbox" name="activities" value="clubs" /> Clubs</label>
+      <label><input type="checkbox" name="activities" value="volunteer" /> Volunteering</label>
+
+      <!-- Textarea -->
+      <label for="comments">Any suggestions or comments?</label>
+      <textarea id="comments" name="comments" rows="4" placeholder="Share your thoughts..."></textarea>
+
+      <!-- Submit Button -->
+      <button id="submit" type="submit">Submit Survey</button>
+    </form>
+  </div>
+</body>
+</html>
